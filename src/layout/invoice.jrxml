@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="56b81752-d5d2-4271-889f-749e984cd3b2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     invoice.`idsewa` AS invoice_idsewa,
+     invoice.`id_mobil` AS invoice_id_mobil,
+     invoice.`id_penyewa` AS invoice_id_penyewa,
+     invoice.`tanggal_sewa` AS invoice_tanggal_sewa,
+     invoice.`tanggal_kembali` AS invoice_tanggal_kembali,
+     invoice.`total` AS invoice_total
+FROM
+     `invoice` invoice]]>
+	</queryString>
+	<field name="invoice_idsewa" class="java.lang.String"/>
+	<field name="invoice_id_mobil" class="java.lang.String"/>
+	<field name="invoice_id_penyewa" class="java.lang.String"/>
+	<field name="invoice_tanggal_sewa" class="java.sql.Date"/>
+	<field name="invoice_tanggal_kembali" class="java.sql.Date"/>
+	<field name="invoice_total" class="java.lang.Long"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="8dbd0ce1-919b-4448-a2a8-ac52012ae33d" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="6d4aec9a-f368-4ed9-a2d8-666efd77d5bb" x="20" y="20" width="333" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sistem Rental Mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ffe3dfd9-b856-47ad-9eca-3e2db9437e05" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DATA INVOICE]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="b15d2cbb-d2a5-4ec1-a053-9e833de7d111" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="3b2f205c-a624-47ac-b008-9cbadc04b955" mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice_idsewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e9364301-0129-4e80-a626-aca2180263c4" mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice_id_mobil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ed275f0-f1e4-4f73-9df5-8093593206ac" mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice_id_penyewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f9b9fb4-fc76-4fb8-a26a-1b5e36091915" mode="Opaque" x="276" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice_tanggal_sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4082b119-2e2f-45ab-a49f-a46a2d9dbe17" mode="Opaque" x="368" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice_tanggal_kembali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b5fe85e-0fa0-43e7-99fc-710914c53a88" mode="Opaque" x="460" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[invoice_total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="f2ed9bfa-3aad-4319-a7c5-bccc3af35a65" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4f2652e7-5df7-4941-8a6e-131ab15157c9" x="0" y="0" width="92" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_idsewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="56b85ddb-806c-41bd-9b17-4eb58d01888a" x="92" y="0" width="92" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_id_mobil}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="6263cc67-d211-4c71-9849-f55f6bc038a9" x="184" y="0" width="92" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_id_penyewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="70b92538-0605-4666-9e45-35f970419485" x="276" y="0" width="92" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_tanggal_sewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="600837a1-0c63-4b0a-8d9c-4739089e7eef" x="368" y="0" width="92" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_tanggal_kembali}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d56f4be9-8bc6-41f0-825d-06785a2a4a01" x="460" y="0" width="92" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="ab5e4907-a71d-4983-8c71-e93de6b138da" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="5addf274-287e-44e2-bb4e-7771b3013cec" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="e29f2a74-c461-4568-86c2-3971f2b9766f" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

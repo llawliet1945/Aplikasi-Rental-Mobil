@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6871fb41-bcef-4362-9a7c-dfc7bb02b34e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pengembalian.`idsewa` AS pengembalian_idsewa,
+     pengembalian.`id_mobil` AS pengembalian_id_mobil,
+     pengembalian.`id_penyewa` AS pengembalian_id_penyewa,
+     pengembalian.`tanggal_sewa` AS pengembalian_tanggal_sewa,
+     pengembalian.`tanggal_kembali` AS pengembalian_tanggal_kembali
+FROM
+     `pengembalian` pengembalian]]>
+	</queryString>
+	<field name="pengembalian_idsewa" class="java.lang.String"/>
+	<field name="pengembalian_id_mobil" class="java.lang.String"/>
+	<field name="pengembalian_id_penyewa" class="java.lang.String"/>
+	<field name="pengembalian_tanggal_sewa" class="java.sql.Date"/>
+	<field name="pengembalian_tanggal_kembali" class="java.sql.Date"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="12e7d79f-d426-4337-9c04-619225e2127d" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="5e3d6c94-cf07-4fd5-8a48-b3e3bf0d9399" x="20" y="20" width="333" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sistem Rental Mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a9686fe4-616b-4dbc-859f-27ee3441b837" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DATA PENGEMBALIAN]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="3b115853-9756-408d-8865-eaf05c036e01" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="10e37ac2-21a0-4de2-afd8-7de2fafcc89a" mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pengembalian_idsewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b38a837e-d2de-43b2-b611-223c59364993" mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pengembalian_id_mobil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e4abd741-d621-4d88-a483-7155b9f67d72" mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pengembalian_id_penyewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76a75535-ff5d-4e29-82f7-577ae1168fcf" mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pengembalian_tanggal_sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0ee76c3-46a7-414f-a80d-d9ceb7b4a7b5" mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pengembalian_tanggal_kembali]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="ad38dd72-92f2-401c-ada0-abd6c3a89c9b" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b939f394-b50a-4d04-8968-33954842bcf3" x="0" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_idsewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="52e092fd-f4ab-49ec-9eae-6e782b14c57e" x="111" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_id_mobil}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a992a7a8-d612-494f-9497-d9417a7df4a6" x="222" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_id_penyewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="9205fa2d-30a2-456c-9674-3f10aaebd4ac" x="333" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_tanggal_sewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d9e297c8-a052-4d8c-b7d2-cd24b936920e" x="444" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengembalian_tanggal_kembali}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="757fd1bb-c21d-4e6e-af5c-70162d235982" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="c9aefc62-3bbb-410a-8566-9613136ca8bb" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="afaa0eed-df07-4058-8c2c-1606bb60ded9" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
