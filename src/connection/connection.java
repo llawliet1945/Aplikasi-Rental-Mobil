@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package connection;
 import java.sql.*;
-/**
- *
- * @author nurvan
+/*
+ * @author https://github.com/llawliet1945
  */
 public class connection{
     private Connection Connection;
