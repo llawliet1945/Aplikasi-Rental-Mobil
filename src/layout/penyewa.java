@@ -9,9 +9,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import connection.connection;
 import java.awt.event.KeyEvent;
-/**
- *
- * @author nurvan
+/*
+ * @author https://github.com/llawliet1945
  */
 public class penyewa extends javax.swing.JFrame {
     private Connection conn = new connection().connect();
